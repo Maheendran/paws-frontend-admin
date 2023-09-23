@@ -72,7 +72,7 @@ export const getcurrentUser = createAsyncThunk(
   async (_,{rejectWithValue}) => {
     try {
       const datas = await axios.get(
-        "http://localhost:5000/admin/current-user",
+        "https://www.furnica.shop/admin/current-user",
         setHeaders()
       );
       return datas.data;
@@ -85,7 +85,7 @@ export const getcurrentUser = createAsyncThunk(
 export const getAllPetOwner = createAsyncThunk("user/getPetOwner", async () => {
   try {
     const datas = await axios.get(
-      "http://localhost:5000/admin/allPetOwners",
+      "https://www.furnica.shop/admin/allPetOwners",
       setHeaders()
     );
     return datas.data;
@@ -97,7 +97,7 @@ export const getAllPetOwner = createAsyncThunk("user/getPetOwner", async () => {
 export const getAllClinic = createAsyncThunk("user/getAllClinic", async () => {
   try {
     const datas = await axios.get(
-      "http://localhost:5000/admin/allClinic",
+      "https://www.furnica.shop/admin/allClinic",
       setHeaders()
     );
     return datas.data;
@@ -111,7 +111,7 @@ export const getGraphData = createAsyncThunk(
   async (_,{rejectWithValue}) => {
     try {
       const datas = await axios.get(
-        "http://localhost:5000/admin/graph-data",
+        "https://www.furnica.shop/admin/graph-data",
         setHeaders()
       );
       console.log(datas.data,'datas.data')
@@ -135,7 +135,7 @@ export const AccountBlock = createAsyncThunk(
   async (value: data) => {
     try {
       const datas = await axios.post(
-        "http://localhost:5000/admin/account-Block",
+        "https://www.furnica.shop/admin/account-Block",
         value,
         setHeaders()
       );
@@ -150,7 +150,7 @@ export const AccountBlock = createAsyncThunk(
 export const UnverifiedDoctor = createAsyncThunk("user/UnverifiedDoctor", async () => {
   try {
     const datas = await axios.get(
-      "http://localhost:5000/admin/verfication-doctor",
+      "https://www.furnica.shop/admin/verfication-doctor",
       setHeaders()
     );
     return datas.data;
@@ -167,7 +167,7 @@ type datas={
 export const checkVerification = createAsyncThunk("user/Verification", async (data:any) => {
   try {
     const datas = await axios.post(
-      "http://localhost:5000/admin/verified-profile",
+      "https://www.furnica.shop/admin/verified-profile",
       data,
       setHeaders()
     );
@@ -183,7 +183,7 @@ export const checkVerification = createAsyncThunk("user/Verification", async (da
 export const getComplaints = createAsyncThunk("user/getComplaints", async () => {
   try {
     const datas = await axios.get(
-      "http://localhost:5000/admin/complaints",
+      "https://www.furnica.shop/admin/complaints",
       
       setHeaders()
     );
@@ -200,7 +200,7 @@ export const updateComplaint = createAsyncThunk(
 
     try {
       const datas = await axios.post(
-        "http://localhost:5000/admin/update-complaint",
+        "https://www.furnica.shop/admin/update-complaint",
         formdata,
         setHeaders()
       );

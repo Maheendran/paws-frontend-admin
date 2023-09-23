@@ -51,7 +51,6 @@ const userUserGraphlist = {
     dataKey: "count",
     chartData: userClinicGraph}
 
-console.log(userUserGraph,'userGraph')
 
   return (
     <div className="home">

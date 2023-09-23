@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-
+import adminInstance from '../../axios/AdminAxios'
 import jwtDecode from "jwt-decode";
 
 export interface AdminData {
@@ -27,7 +27,8 @@ export const loginAdmin = createAsyncThunk(
   "auth/loginAdmin",
   async (data: AdminData, { rejectWithValue }) => {
     try {
-      const datas = await axios.post("http://localhost:5000/admin/login", data);
+      // const datas = await adminInstance.post('/login', data);
+      const datas = await axios.post("https://www.furnica.shop/admin/login", data);
       return datas.data;
     } catch (error: any) {
       console.log(error.message);
