@@ -8,7 +8,7 @@ import { toast, Toaster } from "react-hot-toast";
 const Complaints = () => {
 
 const {allcomplaint}=useAppSelector((state)=>state.user)
-console.log(allcomplaint,'allcomplaint')
+
   const dispatch=useAppDispatch()
 
   useEffect(()=>{
@@ -70,15 +70,15 @@ const handlecancel=(complaintId:string)=>{
                         >
                        
                            <img  className="img-fluid" src={e.user
-? e.user[0].profileImage: "https://cdn3.iconfinder.com/data/icons/vector-icons-6/96/256-1024.png"}
+? e?.user[0]?.profileImage: "https://cdn3.iconfinder.com/data/icons/vector-icons-6/96/256-1024.png"}
                     alt=""
                   
                   />
                         </td>
   
-                        <td>{e.user[0].username}</td>
-                        <td>{e.message}</td>
-                        <td>{e.date}</td>
+                        <td>{e.user[0]?.username}</td>
+                        <td>{e?.message}</td>
+                        <td>{e?.date}</td>
                         
                         <td
                           className="table_image mx-auto text-center"
